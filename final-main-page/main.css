@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 400;
+  transition-duration: 0s;
+  color: cyan;
+}
+
+/*body {
+  background: linear-gradient(to right, #040404, #000000, #656565);
+  font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: black;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}*/
+body {
+  background: url("./bg-image.jpg") no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  float: left;
+  margin-left: 6%;
+  line-height: 50px;
+  font-size: 1.7em;
+}
+
+nav {
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(cyan, cyan, cyan, 0.5);
+  animation: changeColor 5s linear;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+nav:hover {
+  animation: none;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(cyan, cyan, cyan, 0.5);
+}
+nav:hover li a {
+  color: cyan;
+  text-shadow: 0 0 10px rgba(cyan, cyan, cyan, 0.8);
+}
+
+ul {
+  text-align: right;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1),
+    rgb(0, 0, 0)
+  );
+}
+
+li {
+  display: inline-block;
+}
+li:not(:first-child) {
+  padding: 0 0.1%;
+}
+li:hover a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+  text-decoration: none;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+}
+
+li:not(:first-child) a:hover {
+  font-weight: bold;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid cyan;
+  background: transparent;
+  box-shadow: 0 0 5px 2px cyan;
+  transition-duration: 0.1s;
+  border-bottom: 1px solid cyan;
+  color: cyan;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid cyan;
+  right: 2rem;
+  margin-top: -17rem;
+  display: none;
+}
+
+/*FOR LOGIN FORM*/
+
+/*   color variables */
+/*#18ffff: #18ffff; $clr-primary
+#adffff: #adffff;$ clr-primary-light
+#091034: #091034; #18ffff-dark $clr-primary
+#f9fbff: #f9fbff; $clr-gray100
+#f4f6fb: #f4f6fb; $clr-gray150
+#eef1f6: #eef1f6; $clr-gray200
+#e1e5ee: #e1e5ee; $clr-gray300
+#767b91: #767b91; $clr-gray400
+#4f546c: #4f546c; $clr-gray500
+#2a324b: #2a324b; $clr-gray700
+#161d34: #161d34; $clr-gray700
+#060b23: #060b23; $clr-bg
+*/
+
+.container {
+  width: 100%;
+  height: 40vh;
+  font-family: sans-serif;
+  background: url("./login-bg1.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: none;
+  margin-left: 1000px;
+  margin-top: 15rem;
+  width: 300px;
+  height: 500px;
+  box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.26);
+  perspective: 1000px;
+}
+
+.inner-box {
+  border: rgb(113, 10, 248);
+  border-width: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background: url("login-bg2.jpg") no-repeat;
+  background-size: cover;
+  padding: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.login-form {
+  text-align: center;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgb(113, 10, 248);
+}
+
+.form__title {
+  color: black;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  align-content: center;
+}
+
+.form {
+  position: relative;
+  width: 14.5rem;
+  height: 2rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.6rem;
+  color: white;
+  outline: none;
+  padding: 1rem;
+  background: inherit;
+}
+
+.form__input:hover {
+  border-color: cyan;
+}
+
+/* Change border when input focus*/
+
+.form__input:focus {
+  border-color: black;
+}
+
+.form__label {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.5rem;
+  padding: 0 0.5rem;
+  color: white;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: rgb(113, 10, 248);
+}
+
+.login-form .form .eye {
+  position: absolute;
+  margin-right: 0.3rem;
+}
+
+#eye-open {
+  display: none;
+}
+
+.form span {
+  position: absolute;
+  margin-top: 0.5rem;
+  right: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.fa {
+  font-size: 120px;
+  font-weight: bolder;
+}
+
+.form__button {
+  display: block;
+  padding: 0.75rem 2rem;
+  background-color: rgb(32, 46, 240);
+  color: white;
+  font-family: inherit;
+  font-weight: inherit;
+  border-radius: 5rem;
+  outline: none;
+  border-color: black;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.form__button:hover {
+  color: white;
+  background-color: rgb(77, 0, 128);
+  border-color: black;
+}
+/* 
+1. When the input is in the focus state
+reduce the size of the label and move upwards 
+
+2. Keep label state when content is in input field 
+*/
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.4rem;
+  font-size: 1rem;
+  left: 0.8rem;
+  color: black;
+  font-weight: bold;
+}
+
+.card .btn {
+  border-radius: 5px;
+  margin-top: 30px;
+  border: none;
+  height: 50px;
+  width: 100%;
+  margin-left: 2px;
+  background-color: rgb(113, 10, 248);
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+}
