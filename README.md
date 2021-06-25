@@ -1,2 +1,2 @@
 # CollegeSpace-IERT
-Final Year Project - College Website
+Demo - College Website
